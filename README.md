@@ -8,14 +8,14 @@
 ### 📊 Veri Kaynağı ve Entegrasyonu
 Sistem, gücünü gerçek dünya verilerinden ve resmi kayıtlardan alır:
 * **Veri Seti:** Bu çalışmada kullanılan veriler, ABD Ulaştırma Bakanlığı'na bağlı **NHTSA (National Highway Traffic Safety Administration)** resmi veri setlerinden derlenmiştir.
-* **Kapsam:** [NHTSA Datasets & APIs](https://www.nhtsa.gov/nhtsa-datasets-and-apis) üzerinden erişilen gerçek araç geri çağırma (recall) ve güvenlik şikayetleri, modelin eğitimi için "Gold Standard" veri kaynağı olarak kullanılmıştır.
-* **Yerelleştirme:** Orijinal veriler, otomotiv terminolojisine sadık kalınarak Türkçe dil yapısına adapte edilmiş ve 5.000+ satırlık bir "Teknik Şikayet Deposu" oluşturulmuştur.
+* **Kapsam:** [NHTSA Datasets & APIs](https://www.nhtsa.gov/nhtsa-datasets-and-apis) üzerinden erişilen gerçek araç geri çağırma (recall) ve güvenlik şikayetleri kullanılmıştır.
+* **Metodolojik Temel:** Darboğaz ölçümü ve NLP kullanımı konusunda **Federal Reserve (FED)** tarafından yayınlanan güncel yaklaşımlardan ilham alınmıştır.
 
 ### 🛠️ Kullandığım Teknolojiler
 * **BERT (dbmdz/bert-base-turkish-cased):** Türkçe dil yapısı için optimize edilmiş, bağlam duyarlı en gelişmiş NLP modeli.
 * **Python & HuggingFace:** Model ince ayarı (fine-tuning) ve çıkarım (inference) süreçlerinin yönetimi.
 * **PyTorch:** Yüksek performanslı derin öğrenme hesaplamaları ve GPU hızlandırma.
-* **Scikit-Learn:** Precision, Recall ve F1-Score analizleri ile model başarısının matematiksel doğrulaması.
+* **Scikit-Learn:** Precision, Recall ve F1-Score analizleri ile model başarısının doğrulaması.
 
 ### 🚀 Nasıl Çalıştırırsınız?
 Proje, büyük bir model dosyası (`.safetensors`) içerdiği için Git LFS yüklü olmalıdır:
@@ -24,7 +24,7 @@ Proje, büyük bir model dosyası (`.safetensors`) içerdiği için Git LFS yük
 3.  **Tahmin Yapın:** `notebooks/Demo.ipynb` dosyasını açarak hazır modellerle kendi şikayet metinlerinizi test edebilirsiniz.
 
 ### 📈 Akademik Başarı Metrikleri
-Modelin başarısı, akademik standartlarda (Confusion Matrix ve ROC-AUC) valide edilmiştir:
+Modelin başarısı, akademik standartlarda (Confusion Matrix ve ROC-AUC) doğrulanmıştır:
 
 | Performans Göstergesi | Değer |
 | :--- | :--- |
@@ -37,10 +37,11 @@ Modelin başarısı, akademik standartlarda (Confusion Matrix ve ROC-AUC) valide
   <img src="results/ROC_Curve_Academic.png" width="45%" />
 </div>
 
-### 🔗 Referanslar
-Bu çalışma, yapılandırılmamış teknik metinlerin anlamlandırılması üzerine aşağıdaki akademik yaklaşımlardan esinlenmiştir:
-* **Veri Sağlayıcı:** National Highway Traffic Safety Administration (NHTSA).
-* **Metodolojik Referans:** *Nagaiah, B. (2024). Measurement and Effects of Supply Chain Bottlenecks Using Natural Language Processing.* (Nature Scientific Data standartlarına uygunluk).
+### 🔗 Referanslar ve İlham Kaynakları
+Bu çalışma, yapılandırılmamış teknik metinlerin anlamlandırılması üzerine aşağıdaki prestijli kaynaklardan esinlenmiştir:
+* **Ana Metodoloji:** [Measurement and Effects of Supply Chain Bottlenecks Using NLP (Federal Reserve)](https://www.federalreserve.gov/econres/notes/feds-notes/measurement-and-effects-of-supply-chain-bottlenecks-using-natural-language-processing-20230206.html)
+* **Veri Sağlayıcı:** [National Highway Traffic Safety Administration (NHTSA)](https://www.nhtsa.gov/nhtsa-datasets-and-apis)
+* **Akademik Referans:** Nagaiah, B. (2024). Measurement and Effects of Supply Chain Bottlenecks Using Natural Language Processing.
 
 ---
 **Geliştirici:** [Sevgi Akyüz](https://github.com/sevgiakyuz)

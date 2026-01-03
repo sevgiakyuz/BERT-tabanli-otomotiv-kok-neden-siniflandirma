@@ -1,0 +1,9 @@
+transformers==4.42.0
+torch>=2.0.0
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+evaluate
+accelerate

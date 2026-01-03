@@ -1,0 +1,45 @@
+{
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "dtype": "float32",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "Direksiyon ve S\u00fcspansiyon",
+    "1": "Di\u011fer / Genel",
+    "2": "Elektrik ve Yaz\u0131l\u0131m",
+    "3": "Fren Sistemi",
+    "4": "G\u00f6vde ve Donan\u0131m",
+    "5": "G\u00fcvenlik Ekipmanlar\u0131",
+    "6": "Lastik ve Jant",
+    "7": "Motor ve G\u00fc\u00e7 Aktarma"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "Direksiyon ve S\u00fcspansiyon": 0,
+    "Di\u011fer / Genel": 1,
+    "Elektrik ve Yaz\u0131l\u0131m": 2,
+    "Fren Sistemi": 3,
+    "G\u00f6vde ve Donan\u0131m": 4,
+    "G\u00fcvenlik Ekipmanlar\u0131": 5,
+    "Lastik ve Jant": 6,
+    "Motor ve G\u00fc\u00e7 Aktarma": 7
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "transformers_version": "4.57.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
